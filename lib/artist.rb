@@ -1,7 +1,8 @@
 require 'pry'
+include Memorable
 
 class Artist
-  attr_accessor :name
+  attr_accessor :name, :reset_all
   attr_reader :songs
 
   @@artists = []
@@ -19,13 +20,13 @@ class Artist
     @@artists
   end
 
-  def self.reset_all
-    self.all.clear
-  end
-
-  def self.count
-    @@artists.count
-  end
+  # def self.reset_all
+  #   self.all.clear
+  # end
+  #
+  # def self.count
+  #   @@artists.count
+  # end
 
   def add_song(song)
     @songs << song
